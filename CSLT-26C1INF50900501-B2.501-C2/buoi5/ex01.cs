@@ -139,7 +139,7 @@ namespace CSLT_26C1INF50900501_B2._501_C2.buoi5
         }
 
 
-        private static void Main(string[] args)
+        private static void Main213(string[] args)
         {
             bai1b5();
             bai2b5();
