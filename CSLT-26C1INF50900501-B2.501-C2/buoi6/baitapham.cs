@@ -170,7 +170,54 @@ namespace CSLT_26C1INF50900501_B2._501_C2.buoi6
             }
 
         }
+        static string XoaTrungLap(string s)
+        {
+            string result = "";
+            foreach (char c in s)
+            {
+                if (!result.Contains(c))
+                {
+                    result += c;
+                }
+            }
+            return result;
+        }
+        static int UCLN(int a, int b)
+        {
+            while (b != 0)
+            {
+                int temp = b;
+                b = a % b;
+                a = temp;
+            }
+            return a;
+        }
+        static string DecimalToBinary(int n)
+        {
+            if (n == 0)
+                return "0";
 
+            string result = "";
+            while (n > 0)
+            {
+                result = (n % 2) + result;
+                n /= 2;
+            }
+            return result;
+        }
+
+        static int DemSoTu(string sentence)
+        {
+            string[] words = sentence.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            return words.Length;
+        }
+
+        static bool KiemTraNamNhuan(int year)
+        {
+            return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+        }
+}
+        
 
         public static void Main(string[] args)
         {
@@ -299,6 +346,41 @@ namespace CSLT_26C1INF50900501_B2._501_C2.buoi6
             }
             Console.WriteLine();
             //bai 16
+            Console.WriteLine("Nhập chuỗi: ");
+            string s = Console.ReadLine() ?? "";
+            string res = XoaTrungLap(s);
+            Console.WriteLine($"Chuỗi sau khi xóa trùng: {res}");
+            //bai 17
+            Console.WriteLine("Nhập số a: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Nhập số b: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            int reslt = UCLN(a, b);
+            Console.WriteLine($"UCLN({a}, {b}) = {reslt}");
+            //bai18
+            Console.WriteLine("Nhập số n: ");
+            int n18 = Convert.ToInt32(Console.ReadLine());
+
+            string result18 = DecimalToBinary(n18);
+            Console.WriteLine($"Dạng nhị phân: {result18}");
+            //bai 19
+            Console.WriteLine("Nhập năm: ");
+            int year = Convert.ToInt32(Console.ReadLine());
+
+            bool result20 = KiemTraNamNhuan(year);
+            Console.WriteLine($"Kết quả: {result20}");
+
+            //bai20
+            Console.WriteLine("Nhập câu: ");
+            string sentence19 = Console.ReadLine() ?? "";
+
+            int result19 = DemSoTu(sentence19);
+            Console.WriteLine($"Số từ trong câu: {result19}");
+        
+
+
+
 
 
 

@@ -99,7 +99,9 @@ namespace CSLT_26C1INF50900501_B2._501_C2.buoi6
      
 
 
-        public static void Main213(string[] args)
+
+        public static void Main2135(string[] args)
+
         {
           // bai 1
             Console.Write("enter number 1 ");
