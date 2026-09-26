@@ -216,10 +216,10 @@ namespace CSLT_26C1INF50900501_B2._501_C2.buoi6
         {
             return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
         }
-}
+
         
 
-        public static void Main(string[] args)
+        public static void Main2312(string[] args)
         {
             // bai 1
             Console.WriteLine("Enter a : ");
