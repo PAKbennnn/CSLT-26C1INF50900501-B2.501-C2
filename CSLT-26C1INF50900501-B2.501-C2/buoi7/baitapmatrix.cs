@@ -91,7 +91,7 @@ namespace CSLT_26C1INF50900501_B2._501_C2.buoi7
             return result;
         }
 
-        public static void Main(string[] args)
+        public static void Mainmatrix(string[] args)
         {
             Console.WriteLine("enter N :");
             int n = Convert.ToInt32(Console.ReadLine());
